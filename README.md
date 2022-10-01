@@ -27,3 +27,4 @@ The thanos-query containers should include the following argument to couple the 
 ## Objectives
 
 [ ] discover `StoreAPI` endpoints by finding all `Prometheus` `Pods` in the cluster
+
