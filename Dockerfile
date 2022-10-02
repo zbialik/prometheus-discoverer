@@ -19,4 +19,4 @@ FROM gcr.io/distroless/python3-debian10
 COPY --from=build-venv /venv /venv
 WORKDIR /app
 COPY . .
-ENTRYPOINT ["/venv/bin/python3", "-m", "prometheus_discoverer.app"]
+ENTRYPOINT ["/venv/bin/python3", "-m", "thanos_store_discoverer.app"]
