@@ -1,6 +1,6 @@
-# prometheus-discoverer
+# thanos-store-discoverer
 
-A simple python app that implements [File Service Discovery](https://thanos.io/tip/thanos/service-discovery.md/#file-service-discovery) for Thanos Querier by updating a local JSON file with Prometheus endpoints.
+A simple python app that implements [File Service Discovery](https://thanos.io/tip/thanos/service-discovery.md/#file-service-discovery) for Thanos Querier by updating a local JSON file with Thanos StoreAPI endpoints based on thanos sidecars injected by Prometheus Operator.
 
 NOTE: if the Namespaces that will host Prometheus `Pods` are well-known, it'd be better to simply use [DNS Service Discovery](https://thanos.io/tip/thanos/service-discovery.md/#dns-service-discovery) against the `prometheus-operated` `Services` created by Prometheus Operator. For example:
 
@@ -12,6 +12,7 @@ NOTE: if the Namespaces that will host Prometheus `Pods` are well-known, it'd be
 
 - Kubernetes
 - Prometheus Operator
+- Thanos Query running internal to your kubernetes cluster
 - Thanos Sidecar Implementation
 
 ## Usage
@@ -19,7 +20,7 @@ NOTE: if the Namespaces that will host Prometheus `Pods` are well-known, it'd be
 To run:
 
 ```bash
-usage: prometheus_discoverer [-h] [-s SERVER] [-p PREFIX] [-t TIMEOUT]
+usage: thanos_store_discoverer [-h] [-s SERVER] [-p PREFIX] [-t TIMEOUT]
 
 optional arguments:
   -h, --help            show this help message and exit
