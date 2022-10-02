@@ -6,7 +6,7 @@ import argparse
 from functools import partial
 from threading import Thread
 
-from . import kube, recon
+from . import kube
 
 fmt, datefmt = "[%(asctime)s.%(msecs)03d] - %(message)s", "%Y%m%dT%H:%M:%S"
 handlers = [logging.StreamHandler()]
